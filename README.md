@@ -6,16 +6,18 @@ NeuroNav brings together an anatomical 3D brain, bite-sized concept cards, a qui
 
 ## Explore my projects
 
+[Open my interactive project portfolio](https://armita-orbit-studio-2026.potteddove16.chatgpt.site/)
+
 | Project | About | Open |
 | :--- | :--- | :--- |
-| **NeuroNav** 🧠 | A neuroscience study companion with a 3D brain explorer. | [Download the app](https://github.com/armitaj24/NeuroNav/archive/refs/heads/main.zip) · [Read about NeuroNav](#explore-the-experience) |
+| **Orbit** ✺ | A space-themed decision studio for comparing paths and preparing for a mentoring conversation. | [Try Orbit](https://armita-orbit-studio-2026.potteddove16.chatgpt.site/projects/orbit/) · [Product research](projects/orbit/RESEARCH.md) |
+| **Study Space** ✳ | A study and life planner with tasks, a focus timer and a printable weekly view. | [Open the planner](https://armita-orbit-studio-2026.potteddove16.chatgpt.site/projects/study-space/) · [Project details](projects/study-space/README.md) |
+| **NeuroNav** 🧠 | A neuroscience study companion with a 3D brain explorer and sample newsletter. | [Explore NeuroNav](https://armita-orbit-studio-2026.potteddove16.chatgpt.site/neuro.html) · [Read the sample issue](https://armita-orbit-studio-2026.potteddove16.chatgpt.site/projects/neuronav-newsletter/) |
 | **SpotMe** 🏋️ | A gym companion concept; the team won Best Idea at QHack 2026. | [Try the interactive prototype](https://claude.ai/artifact/18M5uzGjmrLY3wRFdNevhC) · [Read about SpotMe](projects/SpotMe.md) |
-| **Study Plan** 📚 | Study-planning project. | Link to be added |
-| **Decision Making** 💡 | Decision-making project. | Link to be added |
 
 [See the full project showcase →](PROJECTS.md)
 
-To try NeuroNav, download the ZIP, unzip it, and open `index.html` in your browser. SpotMe opens directly from its prototype link.
+Orbit, Study Space and NeuroNav are AI-assisted concept prototypes. SpotMe is a team concept prototype using illustrative demo data.
 
 ## Explore the experience
 
@@ -24,6 +26,7 @@ To try NeuroNav, download the ZIP, unzip it, and open `index.html` in your brows
 - **Study space:** use a 10-, 15- or 25-minute focus timer and a small autosaving notebook.
 - **Quick quiz:** try five questions and get an explanation after each answer.
 - **Make it yours:** switch between dark and light themes. Notes, card progress and theme preferences are stored on your device.
+- **NeuroNav Notes:** read a [sample student-friendly newsletter issue](projects/neuronav-newsletter/index.html). Email delivery and sign-ups are not set up.
 
 ## Try it
 
@@ -51,7 +54,8 @@ NeuroNav/
 │   ├── three.min.js        # Three.js r160, MIT licensed
 │   └── THREE-LICENSE.txt
 ├── PROJECTS.md             # Project showcase
-├── projects/               # Additional project write-ups
+├── portfolio.html          # Project portfolio
+├── projects/               # Orbit, Study Space, newsletter and SpotMe details
 └── README.md
 ```
 
