@@ -4,7 +4,16 @@
 
 NeuroNav brings together an anatomical 3D brain, bite-sized concept cards, a quiz and a calm workspace. This starter prototype was developed with ChatGPT for review and further development.
 
-[See more projects →](PROJECTS.md)
+## Explore my projects
+
+| Project | About | Open |
+| :--- | :--- | :--- |
+| **NeuroNav** 🧠 | A neuroscience study companion with a 3D brain explorer. | [Explore this repository](#explore-the-experience) |
+| **SpotMe** 🏋️ | A gym companion concept; the team won Best Idea at QHack 2026. | [Try the interactive prototype](https://claude.ai/artifact/18M5uzGjmrLY3wRFdNevhC) · [Read about SpotMe](projects/SpotMe.md) |
+| **Study Plan** 📚 | Study-planning project. | Link to be added |
+| **Decision Making** 💡 | Decision-making project. | Link to be added |
+
+[See the full project showcase →](PROJECTS.md)
 
 ## Explore the experience
 
