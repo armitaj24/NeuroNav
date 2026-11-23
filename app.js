@@ -18,6 +18,8 @@ const concepts=[
 ];
 const regions={
   overview:{kicker:'YOUR OVERVIEW',title:'The whole picture',description:'Your brain is a wonderfully connected team. Its different regions work together to help you think, feel, move and make sense of the world.',fact:'The two cerebral hemispheres communicate with each other through a bundle of fibres called the corpus callosum.'},
+  left:{kicker:'CEREBRAL HEMISPHERES',title:'Left cerebral hemisphere',description:'The cerebrum has two hemispheres, each containing frontal, parietal, temporal and occipital lobes. They work together across many functions.',fact:'A bundle of fibres called the corpus callosum helps the hemispheres communicate.'},
+  right:{kicker:'CEREBRAL HEMISPHERES',title:'Right cerebral hemisphere',description:'The right cerebral hemisphere contains the same four broad lobes as the left. The two sides exchange information and work together.',fact:'Each cerebral hemisphere is involved in processing information from both sides of the body.'},
   frontal:{kicker:'THINKING & PLANNING',title:'Frontal lobe',description:'The frontal lobes contribute to planning, decision-making and voluntary movement. They sit toward the front of the cerebrum.',fact:'The motor cortex, near the back of each frontal lobe, helps plan and control voluntary movements.'},
   parietal:{kicker:'SENSATION & SPACE',title:'Parietal lobe',description:'The parietal lobes help process information about touch, temperature and the position of the body.',fact:'The somatosensory cortex receives information from different parts of the body.'},
   temporal:{kicker:'SOUND & MEMORY',title:'Temporal lobe',description:'The temporal lobes contribute to processing sounds and play an important part in forming and retrieving memories.',fact:'Auditory regions near the top of each temporal lobe receive information from the ears.'},
@@ -59,15 +61,20 @@ search.addEventListener('input',renderCards);
 document.querySelectorAll('.filter').forEach(button=>button.addEventListener('click',()=>{filter=button.dataset.filter;document.querySelectorAll('.filter').forEach(b=>{const active=b===button;b.setAttribute('aria-pressed',String(active));b.classList.toggle('active',active);});renderCards();}));
 document.querySelector('#reset-progress').addEventListener('click',()=>{studied.clear();saveProgress();renderCards();});
 
-document.querySelectorAll('.region').forEach(button=>button.addEventListener('click',()=>{
-  const id=button.dataset.region,entry=regions[id];if(!entry)return;
-  document.querySelectorAll('.region').forEach(b=>{const active=b===button;b.setAttribute('aria-pressed',String(active));b.classList.toggle('active',active);});
+function selectRegion(id){
+  const entry=regions[id];if(!entry)return;
+  document.querySelectorAll('.region').forEach(b=>{const active=b.dataset.region===id;b.setAttribute('aria-pressed',String(active));b.classList.toggle('active',active);});
+  document.querySelector('#brain-select').value=id;
   document.querySelector('#region-kicker').textContent=entry.kicker;
   document.querySelector('#region-title').textContent=entry.title;
   document.querySelector('#region-description').textContent=entry.description;
   document.querySelector('#region-fact').textContent=entry.fact;
   window.NeuroNavBrain?.select(id);
-}));
+}
+document.querySelectorAll('.region').forEach(button=>button.addEventListener('click',()=>selectRegion(button.dataset.region)));
+document.querySelector('#brain-select').addEventListener('change',event=>selectRegion(event.target.value));
+document.addEventListener('neuronav:select',event=>selectRegion(event.detail));
+document.querySelector('#isolation').addEventListener('input',event=>window.NeuroNavBrain?.setIsolation(event.target.value));
 
 const themeButton=document.getElementById('theme-switch');
 function applyTheme(theme){document.documentElement.dataset.theme=theme;themeButton.innerHTML=theme==='dark'?'☀ <span>Light</span>':'☾ <span>Dark</span>';themeButton.setAttribute('aria-label',theme==='dark'?'Switch to light mode':'Switch to dark mode');}

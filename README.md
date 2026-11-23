@@ -1,14 +1,14 @@
 # NeuroNav 🧠
 
-**A curious little corner for exploring neuroscience, finding your focus and making big ideas feel a bit smaller.**
+**An interactive neuroscience study companion for curious minds.**
 
-NeuroNav is a study companion with an interactive, stylised 3D brain, bite-sized concept cards and a calm workspace. This starter was developed with ChatGPT for review and further development.
+NeuroNav brings together an anatomical 3D brain, bite-sized concept cards, a quiz and a calm workspace. This starter prototype was developed with ChatGPT for review and further development.
 
 [See more projects →](PROJECTS.md)
 
 ## Explore the experience
 
-- **3D brain explorer:** rotate and zoom a model, highlight regions and learn what each helps us do. Use the on-screen controls or arrow keys as an alternative to dragging. The model and regional boundaries are illustrative rather than anatomically exact.
+- **3D brain explorer:** rotate and zoom an anatomical model, choose a region, fade other structures and learn what each helps us do. Use the on-screen controls or arrow keys as an alternative to dragging. Region groupings are approximate.
 - **Brain bank:** search and filter 12 introductory concepts, reveal short explanations and mark cards as studied.
 - **Study space:** use a 10-, 15- or 25-minute focus timer and a small autosaving notebook.
 - **Quick quiz:** try five questions and get an explanation after each answer.
@@ -32,11 +32,15 @@ The notebook, study progress and theme use browser `localStorage` and stay on th
 NeuroNav/
 ├── index.html              # Page structure
 ├── styles.css              # Responsive, theme-aware design
-├── brain.js                # Procedural 3D model and controls
+├── brain.js                # Anatomical 3D viewer and controls
 ├── app.js                  # Study cards, notes, timer and quiz
 ├── assets/
+│   ├── anatomy-*.js        # BodyParts3D anatomical meshes
+│   ├── ANATOMY-ATTRIBUTION.md
 │   ├── three.min.js        # Three.js r160, MIT licensed
 │   └── THREE-LICENSE.txt
+├── PROJECTS.md             # Project showcase
+├── projects/               # Additional project write-ups
 └── README.md
 ```
 
@@ -49,7 +53,7 @@ The introductory content is based on:
 - [MedlinePlus: Nerve conduction](https://medlineplus.gov/ency/anatomyvideos/000089.htm)
 - [MedlinePlus: White matter of the brain](https://medlineplus.gov/ency/article/002344.htm)
 
-This is an introductory educational prototype, not a clinical tool. The model is a creative illustration and its colours do not represent precise anatomical boundaries.
+This is an introductory educational prototype, not a clinical tool. Colours and grouped lobe boundaries are provided for learning and should not be treated as a precise anatomical atlas.
 
 ## Next ideas
 
@@ -58,4 +62,4 @@ This is an introductory educational prototype, not a clinical tool. The model is
 - Add an export option for notes and cards.
 - Share the design choices and what you learned while developing the project.
 
-The interactive model uses [Three.js](https://github.com/mrdoob/three.js), licensed under MIT. Its licence is included in `assets/THREE-LICENSE.txt`.
+The viewer was inspired by [BrainFacts.org's 3D Brain](https://www.brainfacts.org/3d-brain). The anatomical meshes are derived from **BodyParts3D, © DBCLS**, under [CC BY-SA 2.1 JP](https://creativecommons.org/licenses/by-sa/2.1/jp/). See [model attribution](assets/ANATOMY-ATTRIBUTION.md) for provenance and modifications. The viewer uses [Three.js](https://github.com/mrdoob/three.js), licensed under MIT; its licence is included in `assets/THREE-LICENSE.txt`.
