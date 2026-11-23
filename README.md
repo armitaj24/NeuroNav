@@ -8,12 +8,14 @@ NeuroNav brings together an anatomical 3D brain, bite-sized concept cards, a qui
 
 | Project | About | Open |
 | :--- | :--- | :--- |
-| **NeuroNav** 🧠 | A neuroscience study companion with a 3D brain explorer. | [Explore this repository](#explore-the-experience) |
+| **NeuroNav** 🧠 | A neuroscience study companion with a 3D brain explorer. | [Download the app](https://github.com/armitaj24/NeuroNav/archive/refs/heads/main.zip) · [Read about NeuroNav](#explore-the-experience) |
 | **SpotMe** 🏋️ | A gym companion concept; the team won Best Idea at QHack 2026. | [Try the interactive prototype](https://claude.ai/artifact/18M5uzGjmrLY3wRFdNevhC) · [Read about SpotMe](projects/SpotMe.md) |
 | **Study Plan** 📚 | Study-planning project. | Link to be added |
 | **Decision Making** 💡 | Decision-making project. | Link to be added |
 
 [See the full project showcase →](PROJECTS.md)
+
+To try NeuroNav, download the ZIP, unzip it, and open `index.html` in your browser. SpotMe opens directly from its prototype link.
 
 ## Explore the experience
 
