@@ -1,0 +1,61 @@
+# NeuroNav 🧠
+
+**A curious little corner for exploring neuroscience, finding your focus and making big ideas feel a bit smaller.**
+
+NeuroNav is a study companion with an interactive, stylised 3D brain, bite-sized concept cards and a calm workspace. This starter was developed with ChatGPT for review and further development.
+
+[See more projects →](PROJECTS.md)
+
+## Explore the experience
+
+- **3D brain explorer:** rotate and zoom a model, highlight regions and learn what each helps us do. Use the on-screen controls or arrow keys as an alternative to dragging. The model and regional boundaries are illustrative rather than anatomically exact.
+- **Brain bank:** search and filter 12 introductory concepts, reveal short explanations and mark cards as studied.
+- **Study space:** use a 10-, 15- or 25-minute focus timer and a small autosaving notebook.
+- **Quick quiz:** try five questions and get an explanation after each answer.
+- **Make it yours:** switch between dark and light themes. Notes, card progress and theme preferences are stored on your device.
+
+## Try it
+
+Download the project and open `index.html` in a modern browser. If your browser restricts local files, run a small local server instead:
+
+```bash
+python3 -m http.server 8000
+```
+
+Then visit `http://localhost:8000`. The app works without a network connection after the files are downloaded; source links require internet. The 3D model requires a browser with WebGL. If 3D is unavailable, the study tools and descriptions remain usable.
+
+The notebook, study progress and theme use browser `localStorage` and stay on that browser/device. The timer is session-only. There is no account, database or server-side collection of your notes. Clearing browser data can erase locally saved information.
+
+## Project structure
+
+```text
+NeuroNav/
+├── index.html              # Page structure
+├── styles.css              # Responsive, theme-aware design
+├── brain.js                # Procedural 3D model and controls
+├── app.js                  # Study cards, notes, timer and quiz
+├── assets/
+│   ├── three.min.js        # Three.js r160, MIT licensed
+│   └── THREE-LICENSE.txt
+└── README.md
+```
+
+## Sources and scope
+
+The introductory content is based on:
+
+- [NINDS: Brain Basics](https://www.ninds.nih.gov/health-information/public-education/brain-basics)
+- [NINDS: Know Your Brain](https://www.ninds.nih.gov/sites/default/files/2025-05/know-your-brain-brian-basics.pdf)
+- [MedlinePlus: Nerve conduction](https://medlineplus.gov/ency/anatomyvideos/000089.htm)
+- [MedlinePlus: White matter of the brain](https://medlineplus.gov/ency/article/002344.htm)
+
+This is an introductory educational prototype, not a clinical tool. The model is a creative illustration and its colours do not represent precise anatomical boundaries.
+
+## Next ideas
+
+- Add topics, diagrams and citations for the subjects you are studying.
+- Add quiz questions and topic-specific practice.
+- Add an export option for notes and cards.
+- Share the design choices and what you learned while developing the project.
+
+The interactive model uses [Three.js](https://github.com/mrdoob/three.js), licensed under MIT. Its licence is included in `assets/THREE-LICENSE.txt`.
