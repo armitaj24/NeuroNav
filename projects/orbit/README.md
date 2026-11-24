@@ -17,4 +17,4 @@ The example scenario and ratings are illustrative. Scores are a reflection of us
 
 ## Product thinking
 
-Read the [market and discovery notes](RESEARCH.md) for existing alternatives, a possible opportunity and questions to test with students. This is a ChatGPT-assisted concept prototype, built for review and further development.
+Read the [market and discovery notes](RESEARCH.md) for existing alternatives, a possible opportunity and questions to test with students. This is an AI-assisted concept prototype, built for review and further development.

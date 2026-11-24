@@ -2,7 +2,7 @@
 
 **An interactive neuroscience study companion for curious minds.**
 
-NeuroNav brings together an anatomical 3D brain, bite-sized concept cards, a quiz and a calm workspace. This starter prototype was developed with ChatGPT for review and further development.
+NeuroNav brings together an anatomical 3D brain, bite-sized concept cards, a quiz and a calm workspace. This AI-assisted starter prototype was developed for review and further development.
 
 ## Explore my projects
 
