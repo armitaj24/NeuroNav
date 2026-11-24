@@ -102,5 +102,13 @@
       select(region){selection=Object.hasOwn(selectedColors,region)?region:'overview';if(region==='occipital'||region==='cerebellum')sculpture.rotation.y=2.35;else if(region==='left')sculpture.rotation.y=-1.50;else if(region==='right')sculpture.rotation.y=1.50;else if(region==='temporal'||region==='parietal')sculpture.rotation.y=-1.35;else if(region==='frontal')sculpture.rotation.y=-.35;paint();},
       setIsolation(value){isolation=Math.max(0,Math.min(100,Number(value)||0));paint();}
     };
-  }catch(error){console.warn('The 3D model could not be displayed.',error);fallback.hidden=false;canvas.hidden=true;window.NeuroNavBrain=noop;}
+  }catch(error){
+    console.warn('The interactive model is unavailable; showing its anatomical preview.',error);
+    fallback.hidden=false;canvas.hidden=true;stage.classList.add('unavailable');
+    stage.setAttribute('aria-label','Anatomical brain preview. Interactive controls need WebGL.');
+    for(const id of ['rotate-left','rotate-right','zoom-in','zoom-out','reset-view','toggle-spin','isolation']){
+      const control=document.getElementById(id);if(control)control.disabled=true;
+    }
+    window.NeuroNavBrain=noop;
+  }
 })();
